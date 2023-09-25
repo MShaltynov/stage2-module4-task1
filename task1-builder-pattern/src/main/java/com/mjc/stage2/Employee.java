@@ -74,7 +74,7 @@ public class Employee {
         private String phone;
         private String email;
         private String carNumber;
-        private  Employee employee;
+        private final Employee employee;
 
         public EmployeeBuilder() {
             this.employee=new Employee();
