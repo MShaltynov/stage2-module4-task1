@@ -3,7 +3,8 @@ package com.mjc.stage2;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-
+@EqualsAndHashCode
+@ToString
 public class Employee {
     private String name;
     private String lastName;
@@ -68,12 +69,6 @@ public class Employee {
     }
 
     public static class EmployeeBuilder {
-        private String name;
-        private String lastName;
-        private String position;
-        private String phone;
-        private String email;
-        private String carNumber;
         private final Employee employee;
 
         public EmployeeBuilder() {
@@ -115,15 +110,4 @@ public class Employee {
 
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", position='" + position + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", carNumber='" + carNumber + '\'' +
-                '}';
-    }
 }
